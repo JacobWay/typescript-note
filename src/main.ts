@@ -28,7 +28,71 @@
   * Basic Types
   */
 
-  
+// Boolean
+let isDone: boolean = false;
+
+// Number
+let decimal: number = 6;
+let hex: number = 0xf00d;
+let binary: number = 0b1010
+let octal: number = 0o744;
+
+// String
+let color: string = "blue"
+color = 'red'
+
+// Template Strings
+let fullName: string = `Bob Bobbington`
+let age: number = 37
+let sentence: string = `Hello, my name is ${ fullName}.
+
+I'll be ${ age + 1 } years old next month.`
+
+sentence = "Hello, my name is " + fullName + ".\n\n" +
+    "I'll be " + (age + 1) + " years old next month."
+
+// Array
+let list: number[] = [1, 2, 3]
+
+// Generic array type
+let list1: Array<number> = [1, 2, 3]
+
+// Tuple
+let x: [string, number]
+x = ["hello", 10]
+// error, x = [10, 'hello']
+// console.log(x[0].substr(1))
+// console.log(x[1].substr(1))
+// console.log(x[5].toString())
+
+// Enum
+enum Color {Red, Green, Blue}
+let c_enum: Color = Color.Green
+let c_enum_1: string = Color[0]
+console.log(c_enum, c_enum_1, typeof(c_enum))
+
+// Any
+/**
+ * We may need to describe the type of variables that we do not know when we are writing an application.
+ * opt-out of type-checking
+ */
+let notSure: any = 4
+notSure = 'maybe a string instead'
+notSure = false
+notSure.ifItExists = function() {}
+// notSure.ifItExists()
+
+let prettySure: Object = 4
+// prettySure.toFixed = function() {}
+// prettySure.toFixed()
+// console.log(notSure, prettySure, notSure.ifItExists, typeof(notSure.ifItExists))
+
+let list_any: any[] = [1, true, 'free']
+list_any[1] = 100
+
+/**
+ * Interfaces
+ */
 
 interface LabelledValue {
     name: string
