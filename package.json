@@ -1,12 +1,12 @@
 {
   "name": "typeScript_note",
   "version": "1.0.0",
-  "description": "",
+  "description": "type script notes",
   "main": "./dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jacob Way",
   "license": "ISC",
   "devDependencies": {
     "browserify": "^16.2.3",
